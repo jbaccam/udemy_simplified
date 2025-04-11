@@ -19,7 +19,7 @@ export const Courses = [
     instructor: "Rex Kessler",
     price: "73.59",
     image:
-      "https://lh6.googleusercontent.com/yPsibbUh1aHOvi0U3-wtdlNpWWutbyYULv1PLkx0QlOOq81DiXVvPgvKVrtY7Ef1yZF5NLabXrHBjHL80lx9hTqR_64jGRFZdbR9FIs4LDR9RcEn1M9LX_D5i4fYKR4vNZA-dZ9R",
+      "https://media.istockphoto.com/id/147480805/photo/oop-object-oriented-programming.jpg?s=612x612&w=0&k=20&c=r47EPdaimqTUmRu4Pne6jJyi95NPWDJU3IsPW1sAPec=",
     rating: 4.4,
     id: "COMS227",
     description:
@@ -217,7 +217,8 @@ export const Courses = [
     title: "Numerical Methods",
     instructor: "Prof. Sam Brown",
     price: "29.45",
-    image: "https://source.unsplash.com/featured/?NumericalMethods",
+    image:
+      "https://www.bragitoff.com/wp-content/uploads/2015/11/numerical-methods.jpg",
     rating: 3.58,
     id: "SE555",
     description: "Solve complex math problems using approximation techniques.",
@@ -227,7 +228,8 @@ export const Courses = [
     title: "Speech Recognition",
     instructor: "Prof. Jane Lee",
     price: "25.74",
-    image: "https://source.unsplash.com/featured/?SpeechRecognition",
+    image:
+      "https://www.shutterstock.com/shutterstock/videos/3668753259/thumb/11.jpg?ip=x480",
     rating: 4.95,
     id: "COMS320",
     description: "Automate transcription and audio analysis.",
@@ -237,7 +239,7 @@ export const Courses = [
     title: "Blockchain Fundamentals",
     instructor: "Prof. John Nguyen",
     price: "28.40",
-    image: "https://source.unsplash.com/featured/?BlockchainFundamentals",
+    image: "https://applicature.com/wp-content/uploads/2018/08/35.png",
     rating: 4.47,
     id: "EE570",
     description: "Understand decentralized systems and smart contracts.",
@@ -247,17 +249,20 @@ export const Courses = [
     title: "Compiler Design",
     instructor: "Prof. Alex Brown",
     price: "78.43",
-    image: "https://source.unsplash.com/featured/?CompilerDesign",
+    image:
+      "https://play-lh.googleusercontent.com/K2eFdifbg_Qa_Qyd1WrvuHhCG5uVDqbFVKg1-s4L_GR4RU_tnCOnU3FeexECU8f80Rg",
     rating: 3.86,
     id: "CPRE455",
-    description: "Understand how source code is translated into executable programs.",
+    description:
+      "Understand how source code is translated into executable programs.",
   },
   {
     offering_id: 23,
     title: "High-Performance Computing",
     instructor: "Prof. Chris Nguyen",
     price: "58.71",
-    image: "https://source.unsplash.com/featured/?HighPerformanceComputing",
+    image:
+      "https://www.hpc.iastate.edu/sites/default/files/uploads/HPCHowTo/HPCCluster.JPG",
     rating: 4.53,
     id: "STAT246",
     description: "Learn to write parallel code for optimized computation.",
@@ -267,7 +272,8 @@ export const Courses = [
     title: "Formal Languages and Automata",
     instructor: "Prof. Jane Lee",
     price: "52.98",
-    image: "https://source.unsplash.com/featured/?Automata",
+    image:
+      "https://m.media-amazon.com/images/I/7126L5K-WYL._AC_UF1000,1000_QL80_.jpg",
     rating: 4.29,
     id: "COMS361",
     description: "Study grammars, regular expressions, and Turing machines.",
@@ -277,7 +283,8 @@ export const Courses = [
     title: "Agile Project Management",
     instructor: "Prof. Alex Garcia",
     price: "33.25",
-    image: "https://source.unsplash.com/featured/?Agile",
+    image:
+      "https://img.freepik.com/premium-vector/agile-project-management-purple-word-concept_106317-42289.jpg",
     rating: 4.71,
     id: "DS302",
     description: "Manage teams and deliver software efficiently.",
@@ -287,7 +294,8 @@ export const Courses = [
     title: "UX/UI Design",
     instructor: "Prof. Sam Patel",
     price: "49.99",
-    image: "https://source.unsplash.com/featured/?UIUX",
+    image:
+      "https://bif.telkomuniversity.ac.id/sahecar/2024/09/Mengapa-UI-UX-Design-Sangat-Penting-dalam-Pengembangan-Aplikasi.png",
     rating: 4.76,
     id: "DS303",
     description: "Design user-friendly digital interfaces.",
@@ -297,7 +305,8 @@ export const Courses = [
     title: "IoT Systems",
     instructor: "Prof. Chris Brown",
     price: "60.00",
-    image: "https://source.unsplash.com/featured/?IoT",
+    image:
+      "https://content.cogniteq.com/s3fs-public/2023-11/1600x800%202%20%283%29.png",
     rating: 4.33,
     id: "EE450",
     description: "Design smart devices and cloud-connected solutions.",
@@ -307,7 +316,8 @@ export const Courses = [
     title: "Information Retrieval",
     instructor: "Prof. Jane Patel",
     price: "47.00",
-    image: "https://source.unsplash.com/featured/?InformationRetrieval",
+    image:
+      "https://cdn.coveo.com/images/v1707312878/blogprod/InfoRetrieval-Header-1_983653661e61/InfoRetrieval-Header-1_983653661e61.jpg",
     rating: 4.68,
     id: "COMS432",
     description: "Techniques to build search engines and recommenders.",
@@ -317,8 +327,9 @@ export const Courses = [
     title: "Mobile App Development",
     instructor: "Prof. John Lee",
     price: "38.50",
-    image: "https://source.unsplash.com/featured/?MobileAppDevelopment",
-    rating: 4.50,
+    image:
+      "https://riseuplabs.com/wp-content/uploads/2021/07/mobile-application-development-guidelines-riseuplabs.jpg",
+    rating: 4.5,
     id: "SE421",
     description: "Create responsive mobile apps for Android and iOS.",
   },
@@ -327,7 +338,8 @@ export const Courses = [
     title: "Digital Signal Processing",
     instructor: "Prof. Chris Patel",
     price: "65.23",
-    image: "https://source.unsplash.com/featured/?SignalProcessing",
+    image:
+      "https://miro.medium.com/v2/resize:fit:1024/1*n3r6VMvdz2-J6QnVrxVXJQ.jpeg",
     rating: 3.95,
     id: "EE301",
     description: "Apply algorithms to audio and communication signals.",
@@ -337,7 +349,8 @@ export const Courses = [
     title: "Genomics and Bioinformatics",
     instructor: "Prof. Alex Garcia",
     price: "45.00",
-    image: "https://source.unsplash.com/featured/?Bioinformatics",
+    image:
+      "https://www.the-rheumatologist.org/wp-content/uploads/springboard/image/RHU_2013_06_pp30_01_LG.jpg",
     rating: 4.48,
     id: "BIO460",
     description: "Analyze genetic sequences using Python and R.",
@@ -347,7 +360,8 @@ export const Courses = [
     title: "Human-Computer Interaction",
     instructor: "Prof. John Brown",
     price: "30.50",
-    image: "https://source.unsplash.com/featured/?HCI",
+    image:
+      "https://file.jrpanel.com/product/23/11/29/JRPanel_Graphic-Overlay_Membrane-Switch_Acrylic-Panel_0950297913757.jpg",
     rating: 4.64,
     id: "COMS452",
     description: "Design systems with optimal user experience.",
@@ -357,7 +371,8 @@ export const Courses = [
     title: "Quantum Computing",
     instructor: "Prof. Sara Patel",
     price: "70.12",
-    image: "https://source.unsplash.com/featured/?QuantumComputing",
+    image:
+      "https://gmo-research.ai/en/application/files/5716/6080/5815/Quantum_Computing_Image.png",
     rating: 4.01,
     id: "PHYS499",
     description: "Introduction to quantum algorithms and qubits.",
@@ -367,7 +382,8 @@ export const Courses = [
     title: "Data Visualization",
     instructor: "Prof. Jane Garcia",
     price: "55.55",
-    image: "https://source.unsplash.com/featured/?DataVisualization",
+    image:
+      "https://boostlabs.com/wp-content/uploads/2023/02/10-types-of-data-visualization-1-1024x614.jpg",
     rating: 4.83,
     id: "DS360",
     description: "Build interactive and insightful visualizations.",
@@ -377,17 +393,20 @@ export const Courses = [
     title: "Neural Networks",
     instructor: "Prof. Sam Nguyen",
     price: "41.60",
-    image: "https://source.unsplash.com/featured/?NeuralNetworks",
+    image:
+      "https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/cdp/cf/ul/g/3a/b8/ICLH_Diagram_Batch_01_03-DeepNeuralNetwork.png",
     rating: 4.21,
     id: "COMS576",
-    description: "Dive into the architecture and training of deep neural networks.",
+    description:
+      "Dive into the architecture and training of deep neural networks.",
   },
   {
     offering_id: 36,
     title: "Ethical Hacking",
     instructor: "Prof. Alex Patel",
     price: "61.80",
-    image: "https://source.unsplash.com/featured/?Hacking",
+    image:
+      "https://innovationatwork.ieee.org/wp-content/uploads/2022/06/bigstock-Certified-Ethical-Hacker-Ceh-416158993_1024X684.png",
     rating: 4.46,
     id: "SE418",
     description: "Learn penetration testing and vulnerability assessment.",
@@ -397,7 +416,8 @@ export const Courses = [
     title: "Robotics",
     instructor: "Prof. Chris Lee",
     price: "72.30",
-    image: "https://source.unsplash.com/featured/?Robotics",
+    image:
+      "https://datafloq.com/nitropack_static/bwFPUlexqovNnpgzVYWHSBGgHhXiGuaJ/assets/images/optimized/rev-1a064cb/datafloq.com/wp-content/uploads/2023/08/robotics-and-automation-750x420.jpg",
     rating: 3.85,
     id: "CPRE472",
     description: "Program intelligent agents for real-world tasks.",
@@ -407,7 +427,8 @@ export const Courses = [
     title: "Econometrics",
     instructor: "Prof. Jane Nguyen",
     price: "44.20",
-    image: "https://source.unsplash.com/featured/?Econometrics",
+    image:
+      "https://www.thedigitaltransformationpeople.com/wp-content/uploads/2017/10/article_58516a10308b83.39742701-640x400-c-default.jpg",
     rating: 4.42,
     id: "ECON410",
     description: "Explore statistical methods in economics and forecasting.",
@@ -417,7 +438,8 @@ export const Courses = [
     title: "Social Network Analysis",
     instructor: "Prof. Sam Brown",
     price: "32.90",
-    image: "https://source.unsplash.com/featured/?SocialNetwork",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5612AQGXzXUHkyZXFw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1701885617059?e=2147483647&v=beta&t=KFfsKmV4R49QhCQwOY3bYuhzQLQwZD-5ll_5s1Iee5I",
     rating: 4.37,
     id: "DS415",
     description: "Analyze graph structures in social media.",
@@ -427,7 +449,8 @@ export const Courses = [
     title: "Cloud Security",
     instructor: "Prof. Chris Garcia",
     price: "67.89",
-    image: "https://source.unsplash.com/featured/?CloudSecurity",
+    image:
+      "https://wesempire.co.ke/wp-content/uploads/2023/04/Cloud-Security-Best-Practices-Protecting-Your-Data-in-the-Cloud.jpg",
     rating: 3.99,
     id: "SE425",
     description: "Secure cloud-native applications and services.",
@@ -437,7 +460,8 @@ export const Courses = [
     title: "Distributed Systems",
     instructor: "Prof. Jane Brown",
     price: "53.80",
-    image: "https://source.unsplash.com/featured/?DistributedSystems",
+    image:
+      "https://miro.medium.com/v2/resize:fit:1400/1*1vYQfOU-iKGzSldPWjnfRA.jpeg",
     rating: 4.12,
     id: "COMS435",
     description: "Study architecture and challenges in distributed computing.",
@@ -447,7 +471,8 @@ export const Courses = [
     title: "Systems Programming",
     instructor: "Prof. John Patel",
     price: "37.40",
-    image: "https://source.unsplash.com/featured/?SystemsProgramming",
+    image:
+      "https://media.licdn.com/dms/image/v2/C4D12AQEhx1217z_DZw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1616357263067?e=2147483647&v=beta&t=dySdeT6dKgA2V_oj15Az6RLKSXnoySbKIU50njMrtS0",
     rating: 4.11,
     id: "COMS356",
     description: "Write efficient low-level software in C and assembly.",
@@ -457,7 +482,7 @@ export const Courses = [
     title: "Natural Language Processing",
     instructor: "Prof. Alex Lee",
     price: "66.25",
-    image: "https://source.unsplash.com/featured/?NLP",
+    image: "https://devopedia.org/images/article/187/4949.1560446213.png",
     rating: 4.58,
     id: "LING473",
     description: "Explore methods to process and analyze human language.",
@@ -467,7 +492,8 @@ export const Courses = [
     title: "Database Security",
     instructor: "Prof. Sam Garcia",
     price: "39.99",
-    image: "https://source.unsplash.com/featured/?DatabaseSecurity",
+    image:
+      "https://www.cimcor.com/hs-fs/hubfs/DatabaseSecurity%20v6.jpg?width=2240&height=1260&name=DatabaseSecurity%20v6.jpg",
     rating: 4.27,
     id: "COMS467",
     description: "Secure data storage and access in modern DBMS.",
@@ -477,7 +503,8 @@ export const Courses = [
     title: "Multimedia Systems",
     instructor: "Prof. Chris Lee",
     price: "36.10",
-    image: "https://source.unsplash.com/featured/?Multimedia",
+    image:
+      "https://ars.els-cdn.com/content/image/1-s2.0-S0360131502000295-gr1.gif",
     rating: 3.94,
     id: "SE401",
     description: "Handle images, video, and audio for digital platforms.",
@@ -487,7 +514,8 @@ export const Courses = [
     title: "Computational Biology",
     instructor: "Prof. Jane Patel",
     price: "48.75",
-    image: "https://source.unsplash.com/featured/?ComputationalBiology",
+    image:
+      "https://pub.mdpi-res.com/biology/biology-10-00374/article_deploy/html/images/biology-10-00374-g001.png?1619519699",
     rating: 4.52,
     id: "BIO465",
     description: "Use algorithms to explore biological data.",
@@ -497,7 +525,8 @@ export const Courses = [
     title: "Statistical Inference",
     instructor: "Prof. John Nguyen",
     price: "50.05",
-    image: "https://source.unsplash.com/featured/?Statistics",
+    image:
+      "https://cdn.prod.website-files.com/5ef788f07804fb7d78a4127a/6261347c5785ed9b87664187_Why-is-statistical-inference-important.jpg",
     rating: 4.39,
     id: "STAT340",
     description: "Make predictions from sample data using statistical methods.",
@@ -507,7 +536,8 @@ export const Courses = [
     title: "Signal Processing",
     instructor: "Prof. Jane Garcia",
     price: "43.75",
-    image: "https://source.unsplash.com/featured/?SignalProcessing",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/1/11/Cosine_Series_Plus_Noise.png",
     rating: 4.18,
     id: "EE305",
     description: "Analyze and process digital signals.",
@@ -517,7 +547,8 @@ export const Courses = [
     title: "Renewable Energy Systems",
     instructor: "Prof. Sara Brown",
     price: "62.20",
-    image: "https://source.unsplash.com/featured/?RenewableEnergy",
+    image:
+      "https://ars.els-cdn.com/content/image/1-s2.0-S1364032122004592-gr2.jpg",
     rating: 4.25,
     id: "EE480",
     description: "Understand technologies powering solar and wind energy.",
@@ -527,17 +558,20 @@ export const Courses = [
     title: "Data Science Foundations",
     instructor: "Prof. Alex Brown",
     price: "47.30",
-    image: "https://source.unsplash.com/featured/?DataScience",
+    image:
+      "https://education.ohio.gov/getattachment/Topics/Learning-in-Ohio/Mathematics/Resources-for-Mathematics/Math-Pathways/Data-Science-Foundations/Data-Science.png.aspx",
     rating: 4.66,
     id: "DS101",
-    description: "Learn the basics of data wrangling, visualization, and analysis.",
+    description:
+      "Learn the basics of data wrangling, visualization, and analysis.",
   },
   {
     offering_id: 51,
     title: "Machine Vision",
     instructor: "Prof. John Lee",
     price: "59.80",
-    image: "https://source.unsplash.com/featured/?MachineVision",
+    image:
+      "https://www.roboticstomorrow.com/images/upload/images/image2(29).png",
     rating: 4.02,
     id: "COMS491",
     description: "Study image processing and object recognition.",
