@@ -13,7 +13,7 @@ const App = () => {
       {step === "browse" && <BrowseCourses cart={cart} setCart={setCart} setStep={setStep} />}
       {step === "cart" && <Cart cart={cart} setCart={setCart} setStep={setStep} />}
       {step === "payment" && <Payment cart={cart} setCart={setCart} setStep={setStep} />}
-      {step === "summary" && <Summary cart={cart} setStep={setStep} />}
+      {step === "summary" && <Summary cart={cart} setCart={setCart} setStep={setStep} />}
     </div>
   );
 };
