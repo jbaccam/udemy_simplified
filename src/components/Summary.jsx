@@ -25,14 +25,14 @@ const Summary = ({ cart, setCart, setStep }) => {
     return total + parsed;
   }, 0);
 
-  // Example user info (this might get changed later)
+  // Example user info
   const userInfo = {
     name: "John Doe",
     email: "john.doe@example.com",
     address: "123 Main St, Anytown, ST 12345"
   };
 
-  // Build the purchased courses section without using the ternary operator
+  // Build the purchased courses section 
   let purchasedCoursesSection;
   if (cart.length === 0) {
     purchasedCoursesSection = (
