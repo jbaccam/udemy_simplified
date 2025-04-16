@@ -58,6 +58,13 @@ const Payment = ({ cart, setCart, setStep }) => {
       setError("Please fill out all fields.");
       return;
     }
+
+    // save user info for the summary screen
+    sessionStorage.setItem(
+      'userInfo',
+      JSON.stringify({ name, email, address })
+    );
+
     setError("");
     setStep("summary");
   };
