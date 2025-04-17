@@ -5,7 +5,7 @@ const Payment = ({ cart, setCart, setStep }) => {
     name: '', email: '', address: '',
     cardNumber: '', expiryDate: '', cvc: ''
   });
-  const [error, setError]     = useState('');
+  const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleChange = e => {
@@ -15,75 +15,55 @@ const Payment = ({ cart, setCart, setStep }) => {
 
   // formatting helpers
   const handleCardNumberChange = e => {
-    const digitsOnly = e.target.value.replace(/\D/g, '').slice(0,16);
-    const formatted  = digitsOnly.replace(/(\d{4})(?=\d)/g, '$1 ');
+    const digitsOnly = e.target.value.replace(/\D/g, '').slice(0, 16);
+    const formatted = digitsOnly.replace(/(\d{4})(?=\d)/g, '$1 ');
     setPaymentInfo({ ...paymentInfo, cardNumber: formatted });
   };
   const handleExpiryDateChange = e => {
-    let v = e.target.value.replace(/\D/g,'').slice(0,4);
-    if (v.length > 2) v = v.slice(0,2) + '/' + v.slice(2);
+    let v = e.target.value.replace(/\D/g, '').slice(0, 4);
+    if (v.length > 2) v = v.slice(0, 2) + '/' + v.slice(2);
     setPaymentInfo({ ...paymentInfo, expiryDate: v });
   };
   const handleCvcChange = e => {
-    setPaymentInfo({ ...paymentInfo, cvc: e.target.value.replace(/\D/g,'').slice(0,3) });
+    setPaymentInfo({ ...paymentInfo, cvc: e.target.value.replace(/\D/g, '').slice(0, 3) });
   };
 
   // compute total
   const totalCost = cart.reduce((sum, c) => {
-    const price = parseFloat(c.price)||0;
-    const qty   = c.quantity||1;
-    return sum + price*qty;
+    const price = parseFloat(c.price) || 0;
+    const qty = c.quantity || 1;
+    return sum + price * qty;
   }, 0);
 
-  const handleSubmit = async e => {
+  const handleSubmit = e => {
     e.preventDefault();
     const { name, email, address, cardNumber, expiryDate, cvc } = paymentInfo;
-    if (!name||!email||!address||!cardNumber||!expiryDate||!cvc) {
+
+    // simple validation
+    if (!name || !email || !address || !cardNumber || !expiryDate || !cvc) {
       setError("Please fill out all fields.");
       return;
     }
 
+    // “process” payment purely in the UI
     setError('');
     setLoading(true);
 
-    try {
-      const resp = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          customer: { name, email, address },
-          payment:  { cardNumber, expiryDate, cvc },
-          items:    cart.map(c => ({
-            offering_id: c.offering_id,
-            quantity:    c.quantity||1,
-            unit_price:  parseFloat(c.price)||0
-          }))
-        })
-      });
-
-      if (!resp.ok) {
-        const { message } = await resp.json();
-        throw new Error(message || 'Payment failed');
-      }
-
-
+    // simulate a tiny delay so the user sees the spinner
+    setTimeout(() => {
+      // store user info for summary
       sessionStorage.setItem(
         'userInfo',
         JSON.stringify({ name, email, address })
       );
 
-      // clear cart
+      // clear cart and advance to summary
       setCart([]);
-
-      // go to summary
       setStep('summary');
-
-    } catch (err) {
-      setError(err.message);
-    } finally {
       setLoading(false);
-    }
+    }, 500);
   };
+
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-3xl">
@@ -98,8 +78,8 @@ const Payment = ({ cart, setCart, setStep }) => {
             <ul className="mb-4">
               {cart.map(c => (
                 <li key={c.offering_id} className="flex justify-between border-b py-2">
-                  <span>{c.quantity||1}× {c.title}</span>
-                  <span>${((parseFloat(c.price)||0)*(c.quantity||1)).toFixed(2)}</span>
+                  <span>{c.quantity || 1}× {c.title}</span>
+                  <span>${((parseFloat(c.price) || 0) * (c.quantity || 1)).toFixed(2)}</span>
                 </li>
               ))}
             </ul>
@@ -112,7 +92,7 @@ const Payment = ({ cart, setCart, setStep }) => {
 
       {/* Payment & User Info Form */}
       <form onSubmit={handleSubmit} className="space-y-6">
-        {error   && <p className="text-red-500">{error}</p>}
+        {error && <p className="text-red-500">{error}</p>}
         {loading && <p className="text-blue-500">Processing payment…</p>}
 
         {/* User Info */}
