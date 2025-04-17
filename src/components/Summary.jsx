@@ -25,12 +25,14 @@ const Summary = ({ cart, setCart, setStep }) => {
     return total + parsed;
   }, 0);
 
-  // Example user info
+  // User info
+  const stored = JSON.parse(sessionStorage.getItem('userInfo') || '{}');
   const userInfo = {
-    name: "John Doe",
-    email: "john.doe@example.com",
-    address: "123 Main St, Anytown, ST 12345"
+    name: stored.name || '',
+    email: stored.email || '',
+    address: stored.address || ''
   };
+
 
   // Build the purchased courses section 
   let purchasedCoursesSection;

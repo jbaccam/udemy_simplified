@@ -20,14 +20,15 @@ const Payment = ({ cart, setCart, setStep }) => {
     setPaymentInfo({ ...paymentInfo, cardNumber: formatted });
   };
   const handleExpiryDateChange = e => {
-    let val = e.target.value.replace(/\D/g,'').slice(0,4);
-    if (val.length > 2) val = val.slice(0,2) + '/' + val.slice(2);
-    setPaymentInfo({ ...paymentInfo, expiryDate: val });
+    let v = e.target.value.replace(/\D/g,'').slice(0,4);
+    if (v.length > 2) v = v.slice(0,2) + '/' + v.slice(2);
+    setPaymentInfo({ ...paymentInfo, expiryDate: v });
   };
   const handleCvcChange = e => {
     setPaymentInfo({ ...paymentInfo, cvc: e.target.value.replace(/\D/g,'').slice(0,3) });
   };
 
+  // compute total
   const totalCost = cart.reduce((sum, c) => {
     const price = parseFloat(c.price)||0;
     const qty   = c.quantity||1;
@@ -65,9 +66,18 @@ const Payment = ({ cart, setCart, setStep }) => {
         throw new Error(message || 'Payment failed');
       }
 
-      // clear cart and go to confirmation step
+
+      sessionStorage.setItem(
+        'userInfo',
+        JSON.stringify({ name, email, address })
+      );
+
+      // clear cart
       setCart([]);
-      setStep('confirmation');
+
+      // go to summary
+      setStep('summary');
+
     } catch (err) {
       setError(err.message);
     } finally {
@@ -100,9 +110,10 @@ const Payment = ({ cart, setCart, setStep }) => {
         </div>
       </div>
 
+      {/* Payment & User Info Form */}
       <form onSubmit={handleSubmit} className="space-y-6">
-        {error    && <p className="text-red-500">{error}</p>}
-        {loading  && <p className="text-blue-500">Processing payment…</p>}
+        {error   && <p className="text-red-500">{error}</p>}
+        {loading && <p className="text-blue-500">Processing payment…</p>}
 
         {/* User Info */}
         <div>
@@ -174,12 +185,18 @@ const Payment = ({ cart, setCart, setStep }) => {
       </form>
 
       <div className="flex justify-between mt-6">
-        <button onClick={() => setStep('cart')}
+        <button
+          onClick={() => setStep('cart')}
           className="bg-gray-500 text-white px-6 py-2 rounded hover:bg-gray-600"
-        >Back to Cart</button>
-        <button onClick={() => setStep('browse')}
+        >
+          Back to Cart
+        </button>
+        <button
+          onClick={() => setStep('browse')}
           className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"
-        >Continue Shopping</button>
+        >
+          Continue Shopping
+        </button>
       </div>
 
       <footer className="mt-8 text-center text-gray-500 py-4 border-t">
