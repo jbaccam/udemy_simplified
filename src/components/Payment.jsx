@@ -58,7 +58,6 @@ const Payment = ({ cart, setCart, setStep }) => {
       );
 
       // clear cart and advance to summary
-      setCart([]);
       setStep('summary');
       setLoading(false);
     }, 500);

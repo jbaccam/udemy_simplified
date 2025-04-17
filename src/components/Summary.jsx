@@ -22,7 +22,8 @@ const Summary = ({ cart, setCart, setStep }) => {
     if (isNaN(parsed)) {
       return total;
     }
-    return total + parsed;
+    const qty = course.quantity || 1;
+    return total + parsed * qty;
   }, 0);
 
   // User info
@@ -32,7 +33,6 @@ const Summary = ({ cart, setCart, setStep }) => {
     email: stored.email || '',
     address: stored.address || ''
   };
-
 
   // Build the purchased courses section 
   let purchasedCoursesSection;
@@ -44,17 +44,18 @@ const Summary = ({ cart, setCart, setStep }) => {
     purchasedCoursesSection = (
       <div className="space-y-4">
         {cart.map(course => {
+          const qty = course.quantity || 1;
           let displayPrice = "";
           // Determine if the course is free
           if (!course.price || (typeof course.price === 'string' && course.price.toLowerCase() === 'free') || course.price === "0") {
             displayPrice = "Free";
           } else {
-            displayPrice = "$" + course.price;
+            displayPrice = `$${(parseFloat(course.price) * qty).toFixed(2)}`;
           }
           return (
             <div key={course.offering_id} className="flex justify-between border-b pb-2">
               <div>
-                <p className="font-medium">{course.title}</p>
+                <p className="font-medium">{qty}× {course.title}</p>
                 <p className="text-sm text-gray-600">Instructor: {course.instructor}</p>
               </div>
               <p className="font-medium">{displayPrice}</p>
